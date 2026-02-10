@@ -1,0 +1,303 @@
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.weight-input,
+.equipment-selector {
+  flex: 1;
+  min-width: 200px;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.input-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+input[type='number'],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type='number']:focus,
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Unit toggle */
+.unit-toggle {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.unit-toggle button {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  background: #f5f5f5;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.unit-toggle button.active {
+  background: #3498db;
+  color: white;
+}
+
+.unit-toggle button:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.equipment-note {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0.25rem 0 0;
+  font-style: italic;
+}
+
+/* Plate Result */
+.plate-result {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-details h3 {
+  margin-top: 1rem;
+}
+
+.plate-summary {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.plate-summary li {
+  padding: 0.25rem 0;
+  font-size: 0.95rem;
+}
+
+.total-weight {
+  font-size: 1.1rem;
+  margin: 0.75rem 0 0;
+}
+
+.result-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin: 0;
+}
+
+.remainder-warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+/* Bar diagram */
+.plate-bar {
+  overflow-x: auto;
+}
+
+.bar-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  gap: 0;
+}
+
+.bar-side {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.bar-side.left {
+  flex-direction: row;
+}
+
+.bar-side.right {
+  flex-direction: row;
+}
+
+.bar-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bar-shaft {
+  width: 60px;
+  height: 12px;
+  background: #888;
+  border-radius: 2px;
+}
+
+.bar-weight-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+.plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  min-width: 28px;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.plate-label {
+  font-size: 0.6rem;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Plate Config */
+.plate-config {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.plate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.plate-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+}
+
+.plate-weight {
+  min-width: 80px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.plate-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.plate-qty button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plate-qty button:hover {
+  background: #f0f0f0;
+}
+
+.plate-qty span {
+  min-width: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.plate-remove {
+  border: none;
+  background: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0 0.25rem;
+  line-height: 1;
+}
+
+.plate-remove:hover {
+  color: #e74c3c;
+}
+
+.plate-add {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.plate-add input {
+  flex: 1;
+}
+
+.plate-add button {
+  padding: 0.5rem 1rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.plate-add button:hover {
+  background: #2980b9;
+}
