@@ -7,6 +7,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run dev` — start Vite dev server
 - `npm run build` — production build (outputs to `dist/`)
 - `npx tsc --noEmit` — type-check without emitting
+- `npm test` — run all tests (Vitest)
+- `npx vitest run src/utils/calculator.test.ts` — run a single test file
 
 ## Architecture
 
